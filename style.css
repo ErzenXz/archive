@@ -1,0 +1,85 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f5f5f5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #f5f5f5;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h1 {
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275) 0ms;
+}
+
+
+header h1:hover {
+    text-decoration: underline;
+}
+
+main {
+    margin: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    border: 1px solid #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f5f5f5;
+}
+
+li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+li a:hover {
+    color: #f5f5f5;
+    background-color: #333;
+}
+
+li p {
+    margin: 0;
+    font-size: 14px;
+}
+
+input[type="text"] {
+    border: 1px solid #999;
+    padding: 6px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 250px;
+    outline: none;
+    background-color: #f5f5f5;
+    color: #333;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+input[type="text"]:focus {
+    border-color: #666;
+}
+
+footer {
+    text-align: center;
+}

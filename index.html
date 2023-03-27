@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Erzen Archive</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1 onclick="location.reload()">Erzen Archive</h1>
+        <input type="text" id="kerko" onkeyup="kerko()" value="" placeholder="Search...">
+
+    </header>
+    <main>
+        <ul>
+            <li>
+                <a class="emri" href="https://apps.erzen.tk" target="_blank">https://apps.erzen.tk</a>
+                <p>The website provides a wide variety of apps and tools to help users with their daily tasks. From
+                    note-taking to converting units, the website offers everything necessary to simplify and enhance
+                    their lives. The collection of apps and tools is regularly updated, ensuring that users have access
+                    to the latest additions. (2022)
+                </p>
+            </li>
+
+            <li>
+                <a class="emri" href="https://tv.erzen.tk" target="_blank">https://tv.erzen.tk</a>
+                <p>This website allows you to watch TV channels online. It is a free service that allows you to
+                    watch live TV channels from Kosovo. The website is updated regularly, so you can
+                    always find the latest channels. (2020)
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://chat.erzen.tk" target="_blank">https://chat.erzen.tk</a>
+                <p>This website allows you to chat with an AI chatbot. The website is updated regularly, so you can
+                    chat with the latest models. (2023)
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://ai.erzen.tk" target="_blank">https://ai.erzen.tk</a>
+                <p>This website allows you to try our AI projects. The website is updated regularly, so you can
+                    always find the latest projects. (2022)
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://projects.erzen.tk" target="_blank">https://projects.erzen.tk</a>
+                <p>This website allows you to try our projects. The website is updated regularly, so you can
+                    always find the latest projects. (2021)
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://erzenchat.tk" target="_blank">https://erzenchat.tk</a>
+                <p>This website allows you to chat in group with friends or family. The website is updated regularly, so
+                    you can
+                    always find the latest projects. (2021)
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://tv.erzen.tk/chat" target="_blank">https://tv.erzen.tk/chat</a>
+                <p>This website allows you to chat in a public group. The website is outdated and no longer maintained.
+                    (2020)
+
+                </p>
+            </li>
+            <li>
+                <a class="emri" href="https://takvimi.tk" target="_blank">https://takvimi.tk</a>
+                <p>A Takvim is a calendar used by Muslims to keep track of important dates and events in the Islamic
+                    year. It includes information on daily prayer times, calculated based on the sun's position and the
+                    user's location. The prayer times help determine the appropriate times for the five daily prayers.
+                    Takvims may also include other important Islamic dates and events, such as Ramadan and Eid
+                    celebrations. It is an important tool for Muslims to stay connected to their faith and stay
+                    up-to-date with the Islamic calendar. (2023)
+
+
+                </p>
+            </li>
+        </ul>
+    </main>
+
+    <script>
+        function kerko() {
+            var kerkimi = document.querySelector("#kerko").value;
+            var emratKanaleve = document.querySelectorAll(".emri");
+            for (var i = 0; i < emratKanaleve.length; i++) {
+                if (!emratKanaleve[i].textContent.toUpperCase().includes(kerkimi.toUpperCase())) {
+                    emratKanaleve[i].parentNode.style.display = "none";
+                } else {
+                    emratKanaleve[i].parentNode.style.display = "inline-block";
+                }
+            }
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2018-2023 Erzen Archive</p>
+    </footer>
+</body>
+
+</html>
