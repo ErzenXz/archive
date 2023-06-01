@@ -2,9 +2,9 @@
 <html>
 
 <head>
-    <title>
-        Erzen Archive</title>
+    <title>Erzen Archive</title>
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
 </head>
 
 <body>
@@ -199,19 +199,16 @@
         </ul>
     </main>
 
-    <script>
-        function kerko() {
-            var kerkimi = document.querySelector("#kerko").value;
-            var emratKanaleve = document.querySelectorAll(".emri");
-            for (var i = 0; i < emratKanaleve.length; i++) {
-                if (!emratKanaleve[i].textContent.toUpperCase().includes(kerkimi.toUpperCase())) {
-                    emratKanaleve[i].parentNode.style.display = "none";
-                } else {
-                    emratKanaleve[i].parentNode.style.display = "block";
-                }
-            }
-        }
-    </script>
+    <div id="preview-container">
+        <div id="preview-loading">
+            <div class="spinner"></div>
+        </div>
+        <div class="wrap">
+            <iframe id="preview-iframe" src="" sandbox="allow-same-origin allow-scripts"></iframe>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
     <footer>
         <p>&copy; 2018-2023 Erzen Archive</p>
