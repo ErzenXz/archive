@@ -1,14 +1,42 @@
 function kerko() {
-    var kerkimi = document.querySelector("#kerko").value;
+    var kerkimi = document.querySelector("#kerko").value.trim().toUpperCase();
     var emratKanaleve = document.querySelectorAll(".emri");
+    var matchingItems = [];
+
     for (var i = 0; i < emratKanaleve.length; i++) {
-        if (!emratKanaleve[i].textContent.toUpperCase().includes(kerkimi.toUpperCase())) {
-            emratKanaleve[i].parentNode.style.display = "none";
+        var item = emratKanaleve[i];
+        var textContent = item.textContent.toUpperCase();
+        var parent = item.parentNode;
+
+        if (textContent.includes(kerkimi)) {
+            matchingItems.push(parent);
+            parent.style.display = "block";
         } else {
-            emratKanaleve[i].parentNode.style.display = "block";
+            parent.style.display = "none";
+        }
+    }
+
+    if (matchingItems.length === 0) {
+        // Handle no matching results
+        var noResultsMessage = document.querySelector("#no-results-message");
+
+        if (!noResultsMessage) {
+            noResultsMessage = document.createElement("p");
+            noResultsMessage.id = "no-results-message";
+            noResultsMessage.textContent = "No results found.";
+            noResultsMessage.style.textAlign = "center";
+            document.querySelector("main").appendChild(noResultsMessage);
+        }
+    } else {
+        // Remove the no results message if it exists
+        var noResultsMessage = document.querySelector("#no-results-message");
+
+        if (noResultsMessage) {
+            noResultsMessage.remove();
         }
     }
 }
+
 
 
 const links = document.querySelectorAll("a");
