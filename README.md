@@ -24,7 +24,7 @@ As this archive website is a personal project, contributions are not currently b
 
 ## Credits
 
-This archive website was created by [your name here] using HTML, CSS, and JavaScript.
+This archive website was created by Erzen Krasniqi using HTML, CSS, and JavaScript.
 
 ## License
 
